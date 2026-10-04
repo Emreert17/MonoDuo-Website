@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #f4f3ef;
+  --color-paper-deep: #e8e7e0;
+  --color-ink: #0b0b0c;
+  --color-muted: #6b6c66;
+  --color-line: #d9d8d0;
+  --color-accent: #3355ff;
+
+  /* On-dark counterparts */
+  --color-muted-dark: #a3a49d;
+  --color-line-dark: #2c2d2f;
+  --color-accent-soft: #93a4ff;
+
+  --font-sans: var(--font-instrument-sans), "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* The serif-italic accent phrase inside display headings. */
+  :is(h1, h2, h3, p) em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.06em;
+    letter-spacing: -0.02em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      transition-delay: 0s !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility shell {
+  width: 100%;
+  max-width: 85rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+
+  @media (width >= 64rem) {
+    padding-inline: 4rem;
+  }
+}
+
+@utility label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@utility display-1 {
+  font-size: clamp(2.75rem, 8.2vw, 7rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+@utility display-2 {
+  font-size: clamp(2rem, 4.6vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+}
+
+@utility section {
+  padding-block: 4rem;
+
+  @media (width >= 40rem) {
+    padding-block: 5.5rem;
+  }
+
+  @media (width >= 64rem) {
+    padding-block: 7rem;
+  }
+}
