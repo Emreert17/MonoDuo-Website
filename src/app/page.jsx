@@ -1,6 +1,7 @@
 import Contact from "@/components/Contact";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
+import Founders from "@/components/Founders";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Positioning from "@/components/Positioning";
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Testimonial />
         <Process />
         <Why />
+        <Founders />
         <Contact />
         <FinalCta />
       </main>

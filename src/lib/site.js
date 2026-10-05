@@ -33,6 +33,21 @@ export const nav = [
   { label: "Contact", href: "#contact" },
 ];
 
+// The two founders. `position` and `scale` frame each face inside the circular
+// portrait so both read at the same size; the photo files themselves are untouched.
+export const founders = [
+  {
+    name: "Şahan Kanlıkaya",
+    role: "Co-Founder",
+    image: { src: "/founder1.jpeg", position: "50% 33%", scale: 1.15 },
+  },
+  {
+    name: "Emre Ertuğrul",
+    role: "Co-Founder",
+    image: { src: "/founder2.jpg", position: "50% 7%", scale: 1 },
+  },
+];
+
 export const stages = ["Insight", "Product", "Launch", "Growth"];
 
 // The creator testimonial. `width` / `height` are the displayed size of the file

@@ -4,7 +4,7 @@ import { brand, site } from "@/lib/site";
 import "./globals.css";
 
 const sans = Instrument_Sans({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-instrument-sans",
   display: "swap",
 });

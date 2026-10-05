@@ -177,7 +177,7 @@ export default function ContactForm({ fallbackEmail }) {
       </div>
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-        <button type="submit" disabled={loading} className={buttonClass("ink")}>
+        <button type="submit" disabled={loading} className={buttonClass("ink", "enabled:cursor-pointer")}>
           {loading ? "Sending…" : "Start the Conversation"}
           {loading ? (
             <LoaderCircle aria-hidden="true" size={16} className="animate-spin" />
