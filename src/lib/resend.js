@@ -14,9 +14,6 @@ export const contactConfig = {
   get to() {
     return process.env.CONTACT_EMAIL || null;
   },
-  get from() {
-    return (
-      process.env.CONTACT_FROM_EMAIL || "MonoDuo Website <onboarding@resend.dev>"
-    );
-  },
+  // Sender on the monoduo.live domain verified in Resend.
+  from: "MonoDuo <hello@monoduo.live>",
 };
